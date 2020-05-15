@@ -2,7 +2,7 @@ PYTHON		= python
 SETUP		= $(PYTHON) setup.py
 
 .PHONY: all
-all:	
+all:
 	python main.py
 
 
@@ -22,3 +22,7 @@ reqs:	## Load Python requirements
 test:
 	python -m pytest
 
+.PHONY: clean
+clean:	## remove build artifacts
+	rm -rf _build
+	rm -f index.rst conf.py

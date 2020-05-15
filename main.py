@@ -1,3 +1,4 @@
+import os
 from sphinx import application
 
 BASE_CONF = """\
@@ -25,12 +26,10 @@ PyLiT
 """
 
 def main():
-    fout = open('conf.py','w')
-    fout.write(BASE_CONF)
-    fout.close()
-    fout = open('index.rst','w')
-    fout.write(INDEX)
-    fout.close()
+    with open('conf.py','w') as f:
+        f.write(BASE_CONF)
+    with open('index.rst','w') as f:
+        f.write(INDEX)
 
     srcdir = confdir = '.'
     outdir = './_build/html'
