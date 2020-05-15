@@ -1,0 +1,5 @@
+sphinx
+sphinx-rtd-theme
+nose
+pytest
+html4lib
